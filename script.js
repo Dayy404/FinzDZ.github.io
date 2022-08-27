@@ -1,29 +1,28 @@
-let navbar = document.querySelector('.navbar');
 
-document.querySelector('#menu-btn').onclick = () =>{
-    navbar.classList.toggle('active');
-    searchForm.classList.remove('active');
-    cartItem.classList.remove('active');
-}
+// Digital Clock
+setInterval(() => {
 
-let searchForm = document.querySelector('.search-form');
+    const clock = document.querySelector('.clock');
 
-document.querySelector('#search-btn').onclick = () =>{
-    searchForm.classList.toggle('active');
-    navbar.classList.remove('active');
-    cartItem.classList.remove('active');
-}
+    let sec = new Date().getSeconds();
+    let min = new Date().getMinutes();
+    let hr = new Date().getHours();
 
-let cartItem = document.querySelector('.cart-items-container');
+    let day = hr >= 12 ? 'PM' : 'AM';
 
-document.querySelector('#cart-btn').onclick = () =>{
-    cartItem.classList.toggle('active');
-    navbar.classList.remove('active');
-    searchForm.classList.remove('active');
-}
+    sec < 10 ? sec = '0' + sec : sec;
+    min < 10 ? min = '0' + min : min;
+    hr < 10 ? hr = '0' + hr : hr;
 
-window.onscroll = () =>{
-    navbar.classList.remove('active');
-    searchForm.classList.remove('active');
-    cartItem.classList.remove('active');
-}
+    clock.textContent = hr + ':' + min + ':' + sec + ' ' + day;
+
+}, 1000);
+
+
+// Smartphone Menu Bars
+
+const bar = document.querySelector('nav.smartphone i.fa-bars');
+const nav = document.querySelector('nav.navbar');
+bar.addEventListener('click', () => { 
+nav.classList.toggle('active');
+bar.classList.toggle('active2');});
