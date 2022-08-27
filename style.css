@@ -1,20 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 
 :root{
-    --main-color:#FFA500;
-    --black:#13131a;
-    --bg:#010103;
+    --main-color:orange;
+    --black: #13131a;
+    --bg:darkorange;
     --border:.1rem solid rgba(255,255,255,.3);
+    --color-primary: #222831;
+    --color-second: #393E46;
+    --color-button: #FD7014;
+    --color-text: #EEEEEE;
+    --color-button2: #ff8d00;
 }
 
 *{
     font-family: 'Roboto', sans-serif;
-    margin:0; padding:0;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
+
+  color: var(--color-text);
 }
 
 html{
@@ -22,6 +31,11 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
+}
+
+html,body{ 
+display: grid; 
+place-items: center;
 }
 
 html::-webkit-scrollbar{
@@ -33,12 +47,14 @@ html::-webkit-scrollbar-track{
 }
 
 html::-webkit-scrollbar-thumb{
-    background: #fff;
+    background: var(--main-color);
     border-radius: 5rem;
 }
 
 body{
-    background: var(--bg);
+  background: #222831;
+  display: grid;
+  place-items: center;
 }
 
 section{
@@ -92,6 +108,7 @@ section{
     margin:0 1rem;
     font-size: 1.6rem;
     color:#fff;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .header .navbar a:hover{
@@ -110,6 +127,93 @@ section{
 .header .icons div:hover{
     color:var(--main-color);
 }
+
+
+.glict {
+  display: none;
+  position: relative;
+  margin-top: 100px;
+  top: 150px;
+  width: 250px;
+  height: 250px;
+  background: url('logo-img.png');
+  background-size: cover;
+  animation: glitch 3.5s infinite steps(1);
+}
+@keyframes glitch {
+  0%, 100% {
+    background: url('logo-img.png');
+  background-size: cover;
+  }
+
+  92.5% {
+    background: url('glitch-image-1.png');
+  background-size: cover;
+  opacity: 1;}
+
+  95% {
+    background: url('glitch-image-2.png');
+  background-size: cover;
+  opacity: 0;}
+
+  97.5% {
+    background: url('glitch-image-3.png');
+  background-size: cover;
+  opacity: 1;}
+}
+
+
+#clock {
+            width: 500px;
+display: none;
+  position: relative;
+            text-align: center;
+  justify-content: center;
+            margin: 150px;
+  margin-top: 5px;
+            font-size: 80px;
+            font-family: 'Orbitron', sans-serif;
+  cursor: default;
+  text-shadow: 
+    0 0 7px #fff,
+  0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px orange,
+    0 0 82px orange,
+    0 0 92px orange,
+    0 0 102px orange,
+    0 0 151px orange,
+  animation: glowclock 0.11s ease-in-out infinite all;
+}
+
+  @keyframes glowclock {
+    100% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px orange,
+        0 0 80px orange,
+        0 0 90px orange,
+        0 0 100px orange,
+        0 0 150px orange;
+    }
+    0% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 10px #fff,
+        0 0 18px #fff,
+        0 0 38px orange,
+        0 0 73px orange,
+        0 0 80px orange,
+        0 0 94px orange,
+        0 0 140px orange;
+    }
+  }
+
+
+
+
 
 #menu-btn{
     display: none;
@@ -208,7 +312,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background:url(logo-img.png) no-repeat;
+    background:url(../images/home-img.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -641,10 +745,319 @@ section{
 
   }
 
-/*MUSIC PLAYER*/
 
-.audio {
-   position: absolute;
-   top: 100px;
-   justify-content: center;
+
+
+
+nav.smartphone {
+  display: none;
 }
+
+footer {
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin-top: 10px;
+}
+
+footer .nama,
+footer ul,
+footer .sosialmedia,
+footer p {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+footer .sosialmedia a {
+  margin: 0 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  transition: .2s;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  color: white;
+
+  background-color: var(--);
+    flex-direction: column;
+    padding: 40px;
+  }
+
+footer .sosialmedia a i {
+    transition: .2s;
+}
+
+footer .sosialmedia a:hover {
+    background-color: white;
+}
+
+footer .sosialmedia a:hover i {
+    color: var(--main-color)
+}
+
+footer p {
+    font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: white;
+}
+
+article.nama {
+  color: var(--main-color);
+}
+
+.navbar2 a {
+  margin: 30px;
+  font-family: 'Jazz LET', sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+article.myproject {
+    background-color: var(--color-primary);
+    display: grid;
+    grid-template-areas: "judul judul judul" "videoJJ web design" "videoJJ logo ui " "promotion promotion promotion";
+}
+
+.myproject .project {
+    /* background-color: orange; */
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myproject .project .judulProject {
+    text-align: center;
+    color: white;
+    font-size: 1.8em;
+}
+
+.myproject .project a {
+    border: 1px solid white;
+    padding: 5px 15px;
+    color: var(--color-text);
+    margin-top: 10px;
+    transition: .3s;
+    position: relative;
+    z-index: 2;
+    overflow: hidden
+}
+
+.myproject .project a::before {
+    content: '';
+    background: linear-gradient(to right, var(--color-button), var(--color-button2));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.myproject .project a:hover::before {
+    transform: translateX(-100%);
+}
+
+.myproject .project a:hover ::before {
+    transform: translateX(-100%);
+}
+
+.project img,
+.project video {
+    width: 300px;
+    border: 1px solid white;
+}
+
+.myproject .judul {
+    grid-area: judul;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.myproject .web {
+    grid-area: web;
+}
+
+.myproject .videoJJ {
+    grid-area: videoJJ;
+}
+
+.myproject .videoJJ video {
+    width: 250px;
+}
+
+.myproject .design {
+    grid-area: design;
+}
+
+.myproject .logo {
+    grid-area: logo;
+}
+
+.myproject .ui {
+    grid-area: ui;
+}
+
+.myproject .promotion {
+    grid-area: promotion;
+    background-color: var(--color-second);
+    padding: 40px;
+    margin-top: 40px;
+    background: linear-gradient(to right, var(--color-button), var(--color-button2));
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.myproject .promotion .judulProject {
+    font-size: 2.3em;
+}
+
+.myproject .promotion a {
+    background-color: white;
+    color: var(--main-color)
+}
+
+.myproject .promotion a::before {
+    display: none;
+  }
+
+@media (max-width: 500px) {
+    nav {
+        position: fixed;
+        z-index: 98;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+  }
+
+article.myproject {
+        grid-template-areas: "judul" "videoJJ" "web" "design" "logo" "ui" "promotion";
+    }
+    .myproject .web,
+    .myproject .videoJJ,
+    .myproject .design,
+    .myproject .logo,
+    .myproject .ui,
+    .myproject .promotion {
+        margin-bottom: 70px;
+  }
+
+/* Smartphone Menu Bars */
+ul li {
+    list-style: none;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+header nav.smartphone {
+    display: none;
+}
+
+@media (max-width: 500px) {
+nav {
+        position: fixed;
+        z-index: 98;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    nav .logo img {
+        width: 100px;
+    }
+    header nav.smartphone {
+        display: inline-block;
+        width: 100%;
+        z-index: 99;
+        height: fit-content;
+        background-color: transparent;
+        font-size: 2em;
+        position: fixed;
+        top: 3vh;
+    }
+    header nav.smartphone i {
+        cursor: pointer;
+        padding: 10px;
+        background: var(--color-primary);
+        box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+        transition: .3s;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+    }
+    nav ul li {
+        margin: 0;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    nav.desktop {
+        transform: translateY(-100%);
+    }
+    nav.desktop.active {
+        transform: translateY(0);
+    }
+   header nav.smartphone i.active2 {
+        transform: rotate(90deg);
+    }
+    
+    header .myprofile {
+        display: none;
+    }
+    header .judul {
+        margin-top: 0;
+    }
+    header .judul .button {
+        margin-top: 20px;
+    }
+    article.about.me {
+        display: grid;
+        grid-template-areas: "judul" "profile" "deskripsi";
+    }
+    article.about.me .deskripsi,
+    article.about.me .profile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    article.about.me .deskripsi {
+        margin-top: 20px;
+    }
+    article.myproject {
+        grid-template-areas: "judul" "videoJJ" "web" "design" "logo" "ui" "promotion";
+    }
+    .myproject .web,
+    .myproject .videoJJ,
+    .myproject .design,
+    .myproject .logo,
+    .myproject .ui,
+    .myproject .promotion {
+        margin-bottom: 70px;
+    }
+    footer {
+        padding: 60px 40px;
+    }
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer ul li {
+        margin: 5px 0;
+    }
+}
+.header .logo img {
+  opacity: 0%;
+}
+  }
