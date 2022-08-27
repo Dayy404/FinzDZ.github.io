@@ -183,33 +183,7 @@ display: none;
     0 0 92px orange,
     0 0 102px orange,
     0 0 151px orange,
-  animation: glowclock 0.11s ease-in-out infinite all;
 }
-
-  @keyframes glowclock {
-    100% {
-      text-shadow:
-        0 0 4px #fff,
-        0 0 11px #fff,
-        0 0 19px #fff,
-        0 0 40px orange,
-        0 0 80px orange,
-        0 0 90px orange,
-        0 0 100px orange,
-        0 0 150px orange;
-    }
-    0% {
-      text-shadow:
-        0 0 4px #fff,
-        0 0 10px #fff,
-        0 0 18px #fff,
-        0 0 38px orange,
-        0 0 73px orange,
-        0 0 80px orange,
-        0 0 94px orange,
-        0 0 140px orange;
-    }
-  }
 
 
 
@@ -699,7 +673,7 @@ display: none;
     .header .navbar{
         position: absolute;
         top:100%; right: -100%;
-        background: #fff;
+        background: var(--bg);
         width: 30rem;
         height: calc(100vh - 9.5rem);
     }
@@ -711,9 +685,11 @@ display: none;
     .header .navbar a{
         color:var(--black);
         display: block;
-        margin:1.5rem;
+        margin:2rem;
         padding:.5rem;
         font-size: 2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
     }
 
     .header .search-form{
